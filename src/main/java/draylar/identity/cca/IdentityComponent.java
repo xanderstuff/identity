@@ -73,15 +73,15 @@ public class IdentityComponent implements AutoSyncedComponent, ServerTickingComp
         ((DimensionsRefresher) player).identity_refreshDimensions();
 
         // Identity is valid and scaling health is on; set entity's max health and current health to reflect identity.
-        if (identity != null && Identity.CONFIG.scalingHealth) {
-            player.setHealth(Math.min(player.getHealth(), identity.getMaxHealth()));
-            player.getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH).setBaseValue(Math.min(Identity.CONFIG.maxHealth, identity.getMaxHealth()));
-        }
+//        if (identity != null && Identity.CONFIG.scalingHealth) {
+//            player.setHealth(Math.min(player.getHealth(), identity.getMaxHealth()));
+//            player.getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH).setBaseValue(Math.min(Identity.CONFIG.maxHealth, identity.getMaxHealth()));
+//        }
 
         // If the identity is null (going back to player), set the player's base health value to 20 (default) to clear old changes.
-        if (identity == null) {
-            player.getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH).setBaseValue(20);
-        }
+//        if (identity == null) {
+//            player.getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH).setBaseValue(20);
+//        }
 
         // update flight properties on player depending on identity
         if (Identity.hasFlyingPermissions((ServerPlayerEntity) player)) {

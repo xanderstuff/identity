@@ -176,15 +176,15 @@ public abstract class LivingEntityMixin extends Entity {
             cancellable = true
     )
     private void modifyMaxHealth(CallbackInfoReturnable<Float> cir) {
-        if(Identity.CONFIG.scalingHealth) {
-            if ((Object) this instanceof PlayerEntity) {
-                LivingEntity identity = Components.CURRENT_IDENTITY.get(this).getIdentity();
-
-                if (identity != null) {
-                    cir.setReturnValue(identity.getMaxHealth());
-                }
-            }
-        }
+//        if(Identity.CONFIG.scalingHealth) {
+//            if ((Object) this instanceof PlayerEntity) {
+//                LivingEntity identity = Components.CURRENT_IDENTITY.get(this).getIdentity();
+//
+//                if (identity != null) {
+//                    cir.setReturnValue(identity.getMaxHealth());
+//                }
+//            }
+//        }
     }
 
     @Inject(method = "hurtByWater", at = @At("HEAD"), cancellable = true)

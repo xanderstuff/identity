@@ -40,10 +40,10 @@ public class PlayerManagerMixin {
         ((DimensionsRefresher) player).identity_refreshDimensions();
 
         // Re-sync max health for identity
-        if (identity != null && Identity.CONFIG.scalingHealth) {
-            player.setHealth(Math.min(player.getHealth(), identity.getMaxHealth()));
-            player.getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH).setBaseValue(Math.min(Identity.CONFIG.maxHealth, identity.getMaxHealth()));
-            ServerSidePacketRegistry.INSTANCE.sendToPlayer(player, new EntityAttributesS2CPacket(player.getId(), player.getAttributes().getAttributesToSend()));
-        }
+//        if (identity != null && Identity.CONFIG.scalingHealth) {
+//            player.setHealth(Math.min(player.getHealth(), identity.getMaxHealth()));
+//            player.getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH).setBaseValue(Math.min(Identity.CONFIG.maxHealth, identity.getMaxHealth()));
+//            ServerSidePacketRegistry.INSTANCE.sendToPlayer(player, new EntityAttributesS2CPacket(player.getId(), player.getAttributes().getAttributesToSend()));
+//        }
     }
 }
