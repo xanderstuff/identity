@@ -29,6 +29,7 @@ public class AbilityOverlayRenderer {
     private static int fadingProgress = 0;
 
     public static void register() {
+/*
         HudRenderCallback.EVENT.register((matrices, delta) -> {
             MinecraftClient client = MinecraftClient.getInstance();
             ClientPlayerEntity player = client.player;
@@ -125,6 +126,7 @@ public class AbilityOverlayRenderer {
                 matrices.pop();
             }
         });
+*/
     }
 
     private AbilityOverlayRenderer() {
