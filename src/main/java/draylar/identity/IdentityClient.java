@@ -28,12 +28,12 @@ public class IdentityClient implements ClientModInitializer {
                     GLFW.GLFW_KEY_GRAVE_ACCENT,
                     "key.categories.identity"));
 
-    public static final KeyBinding ABILITY_KEY = KeyBindingHelper.registerKeyBinding(
-            new KeyBinding(
-                    "key.identity_ability",
-                    InputUtil.Type.KEYSYM,
-                    GLFW.GLFW_KEY_R,
-                    "key.categories.identity"));
+//    public static final KeyBinding ABILITY_KEY = KeyBindingHelper.registerKeyBinding(
+//            new KeyBinding(
+//                    "key.identity_ability",
+//                    InputUtil.Type.KEYSYM,
+//                    GLFW.GLFW_KEY_R,
+//                    "key.categories.identity"));
 
     @Override
     public void onInitializeClient() {
@@ -53,7 +53,8 @@ public class IdentityClient implements ClientModInitializer {
             }
         });
 
-        // when the use-ability key is pressed, trigger ability
+        /*
+ when the use-ability key is pressed, trigger ability
         ClientTickEvents.START_CLIENT_TICK.register(client -> {
             assert client.player != null;
 
@@ -69,5 +70,6 @@ public class IdentityClient implements ClientModInitializer {
                 }
             }
         });
+*/
     }
 }

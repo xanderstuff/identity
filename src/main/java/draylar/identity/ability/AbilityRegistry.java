@@ -16,17 +16,17 @@ public class AbilityRegistry {
     }
 
     public static void init() {
-        register(EntityType.BLAZE, new BlazeAbility());
-        register(EntityType.CREEPER, new CreeperAbility());
-        register(EntityType.ENDER_DRAGON, new EnderDragonAbility());
-        register(EntityType.ENDERMAN, new EndermanAbility());
-        register(EntityType.GHAST, new GhastAbility());
-        register(EntityType.SNOW_GOLEM, new SnowGolemAbility());
-        register(EntityType.WITHER, new WitherEntityAbility());
-        register(EntityType.COW, new CowAbility());
-        register(EntityType.ENDERMITE, new EndermiteAbility());
-        register(EntityType.LLAMA, new LlamaAbility());
-        register(EntityType.WITCH, new WitchAbility());
+//        register(EntityType.BLAZE, new BlazeAbility());
+//        register(EntityType.CREEPER, new CreeperAbility());
+//        register(EntityType.ENDER_DRAGON, new EnderDragonAbility());
+//        register(EntityType.ENDERMAN, new EndermanAbility());
+//        register(EntityType.GHAST, new GhastAbility());
+//        register(EntityType.SNOW_GOLEM, new SnowGolemAbility());
+//        register(EntityType.WITHER, new WitherEntityAbility());
+//        register(EntityType.COW, new CowAbility());
+//        register(EntityType.ENDERMITE, new EndermiteAbility());
+//        register(EntityType.LLAMA, new LlamaAbility());
+//        register(EntityType.WITCH, new WitchAbility());
     }
 
     public static IdentityAbility get(EntityType<?> type) {
