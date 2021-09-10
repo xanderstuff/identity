@@ -59,11 +59,11 @@ public abstract class PlayerEntityMixin extends LivingEntityMixin implements Nea
 
     @Override
     protected void identity_hurtByWater(CallbackInfoReturnable<Boolean> cir) {
-        LivingEntity entity = Components.CURRENT_IDENTITY.get(this).getIdentity();
-
-        if (entity != null) {
-            cir.setReturnValue(entity.hurtByWater());
-        }
+//        LivingEntity entity = Components.CURRENT_IDENTITY.get(this).getIdentity();
+//
+//        if (entity != null) {
+//            cir.setReturnValue(entity.hurtByWater());
+//        }
     }
 
     @Override

@@ -106,8 +106,8 @@ public class IdentityComponent implements AutoSyncedComponent, ServerTickingComp
 
     @Override
     public void serverTick() {
-        tickTemperature();
-        tickFire();
+//        tickTemperature();
+//        tickFire();
         tickIdentity();
     }
 
