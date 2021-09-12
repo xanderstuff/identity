@@ -5,6 +5,7 @@ import draylar.identity.registry.Components;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.mob.EndermanEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
@@ -25,7 +26,7 @@ public abstract class PlayerEntityAttackMixin extends LivingEntity {
     private void identityAttack(Entity target, CallbackInfo ci) {
         LivingEntity identity = Components.CURRENT_IDENTITY.get(this).getIdentity();
 
-        if(identity != null) {
+        if(identity != null && !(identity instanceof EndermanEntity)) {
             if(getMainHandStack().isEmpty()) {
                 try {
                     identity.tryAttack(target);
