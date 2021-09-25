@@ -24,23 +24,23 @@ public abstract class PlayerEntityAttackMixin extends LivingEntity {
             method = "attack",
             at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/Entity;handleAttack(Lnet/minecraft/entity/Entity;)Z"), cancellable = true)
     private void identityAttack(Entity target, CallbackInfo ci) {
-        LivingEntity identity = Components.CURRENT_IDENTITY.get(this).getIdentity();
-
-        if(identity != null && !(identity instanceof EndermanEntity)) {
-            if(getMainHandStack().isEmpty()) {
-                try {
-                    identity.tryAttack(target);
-                    ci.cancel();
-
-                    // If the target died, grant identity
-                    if(!target.isAlive()) {
-                        IdentityGranting.grantByAttack((PlayerEntity) (Object) this, target.getType());
-                    }
-                } catch (Exception e) {
-                    // FALL BACK TO DEFAULT BEHAVIOR.
-                    // Some mobs do not override, so it defaults to attack damage attribute, but the identity does not have any
-                }
-            }
-        }
+//        LivingEntity identity = Components.CURRENT_IDENTITY.get(this).getIdentity();
+//
+//        if(identity != null && !(identity instanceof EndermanEntity)) {
+//            if(getMainHandStack().isEmpty()) {
+//                try {
+//                    identity.tryAttack(target);
+//                    ci.cancel();
+//
+//                    // If the target died, grant identity
+//                    if(!target.isAlive()) {
+//                        IdentityGranting.grantByAttack((PlayerEntity) (Object) this, target.getType());
+//                    }
+//                } catch (Exception e) {
+//                    // FALL BACK TO DEFAULT BEHAVIOR.
+//                    // Some mobs do not override, so it defaults to attack damage attribute, but the identity does not have any
+//                }
+//            }
+//        }
     }
 }
